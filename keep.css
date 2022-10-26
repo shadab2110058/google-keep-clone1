@@ -1,0 +1,292 @@
+body{
+    margin: 0%;
+}
+#navbar{
+    height:4rem;
+    width:96rem;
+    border: 1px solid rgb(97,99,104);
+    display: flex;
+    justify-content: space-between;
+    opacity: 12;
+}
+
+#main1{
+    display: flex;
+    height: 4rem;
+    width: 12rem;
+}
+
+#navbar img{
+    height: 60%;
+    width: auto;
+    margin-left:1rem;
+    margin-top:1rem;
+}
+#mainMenu img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50px;
+    margin-left: 2rem;
+    padding-right: 2rem;
+}
+#mainMenu:hover{
+    background-color:#ECEEF0; 
+    border-radius: 200%;
+}
+#keepImg{
+   margin-top: -4%;
+   margin-left: -22%;
+   
+}
+#keepText h2{
+    margin-left: 20%;
+    color: rgb(97,99,204);
+}
+.navSearchBar{
+    height:2.5rem;
+    width: 40rem;
+    margin-top: .6rem;
+    border-radius: 10px;
+    margin-right:15rem;
+    background-color: #ECEEF0;
+    padding-left: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.btn{
+    background-color: white;
+    text-decoration: none;
+}
+#main2{
+    display: flex;
+    margin-right: 2%;
+}
+#bigDiv{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+ #leftDiv{
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height:40em;
+    /* margin-top: 2.5rem; */
+} 
+#leftDiv:hover{
+  background-color: #ECEEF0;
+  display: flex;
+  visibility: visible;
+}
+#mid:hover{
+    animation-name: animation;
+    animation-duration: 2s;
+}
+.png{
+    height: 2rem;
+    width: 10rem;
+    padding:.5rem 2.5rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius:10px ;
+}
+#notes{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    visibility: hidd;
+}
+#reminders{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    visibility: hidd;
+}
+#editLabels{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    visibility: hidd;
+}
+#archive{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    visibility: hidd;
+}
+#bin{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    visibility: hidd;
+}
+.text{
+    margin: 1rem;
+}
+#text{
+    margin-left: 1rem;
+    color:#8AA2B8;
+    /* visibility: hidden; */
+}
+#leftDiv:hover{
+    visibility: visible;
+}
+.png:hover{
+    background-color: rgb(242,243,244) ;
+}
+#rightDiv{
+    display: flex;
+    flex-direction: column;
+    width: 80rem;  
+}
+#addDiv{
+    height: 1rem;
+    width: 1rem;
+    margin-left: 1rem;
+}
+#rightDiv input{
+    position: relative;
+   height: 2.5rem;
+   width: 35rem;
+   border-radius: 10px;
+   padding-left: 1rem;
+   margin-top: 1.5rem;
+   left: 10rem;
+   background-color: #ECEEF0;
+   font-size: 1rem;
+   font-weight: 500;
+}
+.note{
+    position: relative;
+    height: 10rem;
+    width: 35rem;
+    border-radius: 10px;
+    padding-left: 2rem;
+    margin-top: 2.5rem;
+    left: 34rem;
+    bottom:35rem;
+    background-color:white;
+    font-size: 2rem;
+    font-weight: 500; 
+}
+#addNote{
+    position: relative;
+    left: 6rem;
+    bottom: -2.5rem;
+    height:3rem;
+    width:3rem;
+    border-radius: 10px;
+}
+#textArea{
+    position: relative;
+    height: 3rem;
+    max-width: 35rem;
+    min-width: 35rem;
+    min-height: 6rem;
+    border-radius: 10px;
+    padding-right:1rem; 
+    margin-top: 2.5rem;
+    left: -10rem;
+    background-color: #ECEEF0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: text;
+}
+.edit{
+    position: relative;
+    left: -10rem;
+    top: 2rem;
+    border-radius: 10px;
+}
+.main{
+    position: relative;
+    height: 3rem;
+    max-width: 35rem;
+    min-width: 35rem;
+    min-height: 6rem;
+    border-radius: 10px;
+    padding-right:1rem; 
+    margin-top: 2.5rem;
+    left: -10rem;
+    background-color: #ECEEF0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500; 
+
+}
+.delete{
+    position: relative;
+    left: -10rem;
+    top: 2rem;
+    border-radius: 10px;
+}
+.hidden{
+    display: none;
+}
+
+/* ---------------------------------------------------media queries---------------------------------------------------------------- */
+  
+  @media screen and (max-width:768px)
+  {
+    .text{
+        display: none;
+    }
+    
+    #textArea{
+        height:100px;
+        max-width:500px;
+        min-width: 500px;
+        min-height:100px;
+        padding-right:2rem; 
+        margin-top: 2.5rem;
+
+        font-size: 1rem;
+        font-weight: 500;
+        padding-left: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    #main2{
+        margin: 2%;
+    }
+    .navSearchBar{
+        height: 6.5rem;
+        width: 48rem;
+        margin-top: 0.6rem;
+        margin-right: -11rem;
+        padding-left: 2rem;
+        font-size: 4rem;
+    }
+    #keepImage{
+        height: 10rem;
+    }
+    #leftDiv
+    {
+        width: 7rem;
+        height: 40rem;
+        margin-top: -0.5rem;
+    }
+    #navbar{
+         height: 8rem;
+         width: 96rem;
+
+    }
+    #main1{
+        height: 6rem;
+        width: 9rem;
+    }
+    .note{
+        position: relative;
+        height: 11rem;
+        width: 61rem;
+        padding-left: 0rem;
+        left: 28rem;
+        bottom: 35rem;
+    
+    }
+  }
