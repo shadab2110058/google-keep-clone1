@@ -1,6 +1,9 @@
 body{
     margin: 0%;
 }
+html{
+    font-size: 100%;
+}
 #navbar{
     height:4rem;
     width:96rem;
@@ -97,7 +100,7 @@ body{
     visibility: hidd;
 }
 #reminders{
-    margin-top: 1.5rem;
+    margin-top:1.5rem;
     display: flex;
     align-items: center;
     visibility: hidd;
@@ -127,6 +130,10 @@ body{
     margin-left: 1rem;
     color:#8AA2B8;
     /* visibility: hidden; */
+}
+#bigDiv{
+    min-width:95rem;
+    width: 50rem;
 }
 #leftDiv:hover{
     visibility: visible;
@@ -180,13 +187,13 @@ body{
 #textArea{
     position: relative;
     height: 3rem;
-    max-width: 35rem;
-    min-width: 35rem;
+    max-width: 60rem;
+    min-width: 60rem;
     min-height: 6rem;
     border-radius: 10px;
     padding-right:1rem; 
     margin-top: 2.5rem;
-    left: -10rem;
+    left: -13rem;
     background-color: #ECEEF0;
     font-size: 1rem;
     font-weight: 500;
@@ -197,20 +204,20 @@ body{
 }
 .edit{
     position: relative;
-    left: -10rem;
+    left: -13rem;
     top: 2rem;
     border-radius: 10px;
 }
 .main{
     position: relative;
     height: 3rem;
-    max-width: 35rem;
-    min-width: 35rem;
+    max-width: 60rem;
+    min-width: 60rem;
     min-height: 6rem;
     border-radius: 10px;
     padding-right:1rem; 
     margin-top: 2.5rem;
-    left: -10rem;
+    left: -13rem;
     background-color: #ECEEF0;
     font-size: 1rem;
     font-weight: 500;
@@ -221,7 +228,7 @@ body{
 }
 .delete{
     position: relative;
-    left: -10rem;
+    left: -13rem;
     top: 2rem;
     border-radius: 10px;
 }
@@ -233,60 +240,147 @@ body{
   
   @media screen and (max-width:768px)
   {
-    .text{
+    html{
+        font-size: 40%;
+    }
+   
+     .text{
         display: none;
     }
     
+    #text{
+        position: relative;
+        top: 1rem;
+        margin-left: 3rem;
+        height: 4rem;
+        font-size: 5rem;
+        color:#8AA2B8;
+        /* visibility: hidden; */
+    }
     #textArea{
         height:100px;
         max-width:500px;
         min-width: 500px;
         min-height:100px;
         padding-right:2rem; 
-        margin-top: 2.5rem;
-
-        font-size: 1rem;
+        margin-top: 5.5rem;
         font-weight: 500;
         padding-left: 1rem;
-        font-size: 1rem;
+        font-size: 3rem;
         font-weight: 500;
     }
+    .main{
+        height:100px;
+        max-width:500px;
+        min-width: 500px;
+        min-height:100px;
+        padding-right:2rem; 
+        margin-top: 5.5rem;
+        font-weight: 500;
+        padding-left: 1rem;
+        font-size: 3rem;
+        font-weight: 500; 
+    }
     #main2{
-        margin: 2%;
+    
+        margin: 1%;
     }
     .navSearchBar{
         height: 6.5rem;
-        width: 48rem;
+        width: 63rem;
         margin-top: 0.6rem;
-        margin-right: -11rem;
+        margin-right: -13rem;
         padding-left: 2rem;
-        font-size: 4rem;
+        font-size: 5rem;
     }
-    #keepImage{
-        height: 10rem;
+    /* #keepImage img{
+        position: relative;
+        top: 6rem;
+    } */
+    #keepText{
+        position: relative;
+        top: rem;
+    }
+    #keepText{
+        font-size: 2rem;
+    }
+    #bigDivText input{
+        height:5rem;
+        width: 73rem;
+        position: relative;
+        top: -.1rem;
+        margin-left:4rem; 
+        font-size: 3rem;
     }
     #leftDiv
     {
-        width: 7rem;
+        width: 11rem;
         height: 40rem;
         margin-top: -0.5rem;
     }
+     .png img{
+        margin-top: 2rem;
+        padding: 10rem 0rem;
+        height: 7rem;
+        width: 7rem;
+    } 
+    #notes{
+        margin-top: 5rem;
+        
+    }
+    #reminders{
+        margin-top:5rem;
+        
+        
+    }
+    #editLabels{
+        margin-top:5rem;
+        
+        
+    }
+    #archive{
+        margin-top:5rem;
+    
+        
+    }
+    #bin{
+        margin-top:5rem;
+        
+        
+    }
+    #rightDiv{
+        width: 99rem;
+        height: 40rem;
+    }
     #navbar{
          height: 8rem;
-         width: 96rem;
+         width:109rem;
 
     }
     #main1{
-        height: 6rem;
+        height: 8rem;
         width: 9rem;
     }
     .note{
         position: relative;
-        height: 11rem;
+        height: 12rem;
         width: 61rem;
         padding-left: 0rem;
         left: 28rem;
-        bottom: 35rem;
-    
+        margin-top: 15rem;
+        top:-45rem;
+         
+    } 
+    #addNote{
+        height: 6rem;
+        width: 6rem;
     }
-  }
+    #mainMenu img{
+        height: 6rem;
+        width: 6rem;
+        margin-left: 2rem;
+        padding-right: 1rem;
+    }
+    
+    
+  } 
