@@ -2,12 +2,14 @@
 const addButton = document.getElementById("addNote");
 const updateLSData = ()=>{
    const textAreaData = document.querySelectorAll('textarea');
-   console.log(textAreaData);
+  
    const not = [];
-    
+   // console.log(textAreaData);
+
    textAreaData.forEach((i)=>{
       return not.push(i.value);
    });
+   // console.log(i);
    localStorage.setItem('not',JSON.stringify(not));
 };
 
@@ -36,7 +38,11 @@ const updateLSData = ()=>{
             deleteButton.addEventListener('click',  () =>
                {
                  i.remove();
+                 updateLSData();   
                 });
+                
+                  textArea.value = text;
+                  mainButton.innerHTML =text;
 
                   editButton.addEventListener('click',() =>{ 
                   mainButton.classList.toggle('hidden');
@@ -47,7 +53,6 @@ const updateLSData = ()=>{
                {
                   const value = event.target.value;
                   textArea.innerHTML = value;
-               
                   mainButton.innerHTML = value;   
                   updateLSData();    
                });
