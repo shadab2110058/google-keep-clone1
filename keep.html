@@ -13,21 +13,26 @@
 <body>
     <nav id="navbar">
         <div id="main1">
-           <div id="mainMenu">
+          <div id="mainMenu">
                <img src="main-menu.svg" alt="">
-           </div>
+          </div>
            <div id="keepImg">
-                <img src="keep img.png" alt="">
-           </div>
-           <div id="keepText">
-              <h2>Keep</h2>
-           </div>
-        </div>
-        <input class="navSearchBar" type="text" placeholder="Search" >
-        <div id="main2">
-               <div id="search">
-                    <img src="search.svg" alt="">
+               <img src="keep img.png" alt="">
+          </div>
+               <div id="keepText">
+                    <h2>Keep</h2>
                </div>
+          </div>
+          <div>
+               <input class="navSearchBar" type="text" placeholder="Search" >
+               <!-- <input class="navSearchBar" aria-label="Search" autocomplete="off" placeholder="Search" role="combobox" value="" name="q" type="text" aria-hidden="false"> -->
+          <div id="search">
+               <img src="search.svg" alt="">
+          </div>   
+     </div>
+
+        <div id="main2">
+              
                <div id="refresh">
                     <img src="refresh.svg" alt="">
                     
@@ -43,7 +48,7 @@
         </div>
     </nav>
 <div id="bigDiv">
-    <div id="leftDiv">
+     <div id="leftDiv">
          <div id="notes" class="png">
               <img src="notes.svg" alt="">
               <h4 class="text">Notes</h4>
@@ -53,31 +58,42 @@
                <h4 class="text">Reminders</h4>
          </div>
          <div id="editLabels"class="png">
-                <img src="edit.svg" alt="">
-                <h4 class="text">Edit Labels</h4>
+               <img src="edit.svg" alt="">
+               <h4 class="text">Edit Labels</h4>
          </div>
          <div id="archive"class="png">
-                 <img src="archive.svg" alt="">
-                 <h4 class="text">Archive</h4>
-         </div>
-         <div id="bin"class="png">
-                  <img src="bin.svg" alt="">
-                  <h4 class="text">Bin</h4>
+               <img src="archive.svg" alt="">
+               <h4 class="text">Archive</h4>
+          </div>
+          <div id="bin"class="png">
+               <img src="bin.svg" alt="">
+               <h4 class="text">Bin</h4>
          </div>
     </div>
 
-    <div id="rightDiv">
-
-     <div id="addDiv">
-          <button id="addNote"><img src="add.svg" alt=""></button>
-               
+     <div id="rightDiv">
+          <div id="addDiv">
+               <button id="addNote"><img src="add.svg" alt=""></button>
+          </div>
+          <div id="bigDivText">
+             <input id="text" type="text" placeholder="Take a note..." onKeyUp="search()">
+             <div id="icon">
+               <div id="refresh1" class="iconText">Refresh</div>
+               <div id="viewGrid1" class="iconText">ViewGrid</div>
+               <div id="setting1" class="iconText">Setting</div>
+             </div>
+          </div>
      </div>
-        <div id="bigDivText">
-         <input id="text" type="text" placeholder="Take a note...">
-     </div>
-    </div>
 </div>
-
+<script>
+     const search = ()=>{
+          let filter = document.getElementByClassName("note");
+           console.log(filter);
+          // let text = filter.getElementByTagName("textarea");
+          // let texrArea = textarea.getElementsById("textArea").value;
+          // console.log("textArea");
+     }
+</script>
 <script src="keep.js"></script>
 </body>
 </html>

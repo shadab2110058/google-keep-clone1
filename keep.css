@@ -6,7 +6,7 @@ html{
 }
 #navbar{
     height:4rem;
-    width:96rem;
+    width:95rem;
     border: 1px solid rgb(97,99,104);
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ html{
 #mainMenu img{
     height: 2rem;
     width: 2rem;
-    border-radius: 50px;
+    border-radius:10px;
     margin-left: 2rem;
     padding-right: 2rem;
 }
@@ -52,7 +52,7 @@ html{
     border-radius: 10px;
     margin-right:15rem;
     background-color: #ECEEF0;
-    padding-left: 2rem;
+    padding-left: 3rem;
     font-size: 2rem;
     font-weight: 500;
 }
@@ -63,6 +63,16 @@ html{
 #main2{
     display: flex;
     margin-right: 2%;
+    
+}
+#refresh{
+    margin-right: rem;
+}
+#setting{
+    margin-right: rem;
+}
+#viewGrid{
+    margin-right: rem;
 }
 #bigDiv{
     display: flex;
@@ -81,6 +91,11 @@ html{
   background-color: #ECEEF0;
   display: flex;
   visibility: visible;
+}
+#search{
+    position: relative;
+    top: -3.3rem;
+    left: -.2rem;
 }
 #mid:hover{
     animation-name: animation;
@@ -129,7 +144,6 @@ html{
 #text{
     margin-left: 1rem;
     color:#8AA2B8;
-    /* visibility: hidden; */
 }
 #bigDiv{
     min-width:95rem;
@@ -163,6 +177,9 @@ html{
    font-size: 1rem;
    font-weight: 500;
 }
+input#text{
+    width: 31.5rem;
+}
 .note{
     position: relative;
     height: 10rem;
@@ -187,8 +204,8 @@ html{
 #textArea{
     position: relative;
     height: 3rem;
-    max-width: 60rem;
-    min-width: 60rem;
+    max-width:35rem;
+    min-width: 35rem;
     min-height: 6rem;
     border-radius: 10px;
     padding-right:1rem; 
@@ -211,8 +228,8 @@ html{
 .main{
     position: relative;
     height: 3rem;
-    max-width: 60rem;
-    min-width: 60rem;
+    max-width: 35rem;
+    min-width: 35rem;
     min-height: 6rem;
     border-radius: 10px;
     padding-right:1rem; 
@@ -235,7 +252,32 @@ html{
 .hidden{
     display: none;
 }
-
+#icon{
+    display: flex;
+    float: right;
+    position:relative ;
+    top: -3rem;
+    left: -1rem;
+    height: rem;
+}
+.iconText{
+    opacity: 0;
+    color: black;
+    position: relative;
+    top:-2.3rem;
+    height: 5rem;
+    left: -.5rem;
+    /* background-color: black; */
+}
+#refresh1:hover{
+    opacity: 1;
+}
+#viewGrid1:hover{
+    opacity: 1;
+}
+#setting1:hover{
+    opacity: 1;
+}
 /* ---------------------------------------------------media queries---------------------------------------------------------------- */
   
   @media screen and (max-width:768px)
@@ -288,15 +330,16 @@ html{
     .navSearchBar{
         height: 6.5rem;
         width: 63rem;
-        margin-top: 0.6rem;
+        margin-top: 0.4rem;
         margin-right: -13rem;
-        padding-left: 2rem;
+        padding-left: 5rem;
         font-size: 5rem;
     }
-    /* #keepImage img{
+    #search{
         position: relative;
-        top: 6rem;
-    } */
+        top: -6.3rem;
+        left: -0.2rem;
+    }
     #keepText{
         position: relative;
         top: rem;
@@ -348,9 +391,17 @@ html{
         
         
     }
+    #addDiv{
+        position: relative;
+        left: -3rem;
+    }
     #rightDiv{
         width: 99rem;
         height: 40rem;
+    }
+    #bigDivText{
+        position: relative;
+        left: -3rem;
     }
     #navbar{
          height: 8rem;
