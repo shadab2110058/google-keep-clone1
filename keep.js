@@ -1,31 +1,40 @@
 
+
+function toggleBar(){
+   let view =document.getElementById("menu");
+   view.classList.toggle('hider');
+}
 const addButton = document.getElementById("addNote");
 const updateLSData = ()=>{
    const textAreaData = document.querySelectorAll('textarea');
-  
    const not = [];
-   // console.log(textAreaData);
-
+  
+   console.log(not.length);
    textAreaData.forEach((i)=>{
       return not.push(i.value);
+      
    });
-   // console.log(i);
+   
    localStorage.setItem('not',JSON.stringify(not));
 };
 
-   const addNewNote =(text ="") =>
+   const addNewNote = (text ="") =>
    {
+     
       const i = document.createElement('div');
       i.classList.add("note");
-      
+      // console.log(not.innerHTML);
+   
       const htmlData=`
 
-      <div>
+      
       <button class="edit"><img src="save.svg" alt=""></button>
       <button class="delete"><img src="delete.svg" alt=""></button>
-      </div>
+      
       <div class="main ${text ? "" : "hidden"}"></div>
-      <textarea id="textArea" class="${text ? "hidden" : ""}"></textarea> `;
+      <textarea id="textArea" class="${text ? "hidden" : ""}">
+     
+      </textarea> `;
        i.insertAdjacentHTML('afterbegin',htmlData);
       //    console.log(i);
 
@@ -41,8 +50,9 @@ const updateLSData = ()=>{
                  updateLSData();   
                 });
                 
-                  textArea.value = text;
-                  mainButton.innerHTML =text;
+                  textArea.innerHTML = text;
+                  mainButton.innerHTML = text;
+                  
 
                   editButton.addEventListener('click',() =>{ 
                   mainButton.classList.toggle('hidden');
@@ -58,8 +68,9 @@ const updateLSData = ()=>{
                });
 
          
+               let rightdown = document.getElementById('rightdown');
 
-               document.body.appendChild(i);
+               rightdown.appendChild(i);
 
 
    }
@@ -67,10 +78,10 @@ const updateLSData = ()=>{
                if(not)
                {
                   not.forEach((i)=>addNewNote(i))
-               };
-
-   
+               }
+            
             addButton.addEventListener('click',()=>addNewNote());
+
 
 
                

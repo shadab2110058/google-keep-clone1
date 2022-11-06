@@ -1,49 +1,65 @@
 body{
-    margin: 0%;
+    height: 0%;
+    width: 0% ;
+    margin: 0px;
+    padding: 0px;
+    background-image:url('bgimg.jpg');
 }
 html{
     font-size: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 #navbar{
+    display: relative;
     height:4rem;
-    width:95rem;
-    border: 1px solid rgb(97,99,104);
+    width:96rem;
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg,blue,black,brown,yellow,orange,green,red);
+    border-image-slice:1;
     display: flex;
     justify-content: space-between;
     opacity: 12;
+    background-color: rgb(127, 172, 157);
+    z-index:0;
 }
 
 #main1{
     display: flex;
     height: 4rem;
     width: 12rem;
+    flex-direction: row;
 }
 
-#navbar img{
-    height: 60%;
-    width: auto;
-    margin-left:1rem;
-    margin-top:1rem;
+
+#mainMenu{
+    margin: 1.2rem 2rem;
 }
-#mainMenu img{
+#mainMenu button {
+   height: 2rem;
+   width: 2rem;
+   background-color:antiquewhite;
+   border-radius: 5px;
+}
+#mainMenu button img{
+    position: relative;
     height: 2rem;
     width: 2rem;
-    border-radius:10px;
-    margin-left: 2rem;
-    padding-right: 2rem;
+    right: .5rem;
+    top: -.3rem;
 }
 #mainMenu:hover{
     background-color:#ECEEF0; 
     border-radius: 200%;
 }
 #keepImg{
-   margin-top: -4%;
-   margin-left: -22%;
-   
+   /* margin-left: -22%;   */
+   position: relative;
+   top: .5rem;
 }
 #keepText h2{
     margin-left: 20%;
-    color: rgb(97,99,204);
+    color: #ECEEF0;
 }
 .navSearchBar{
     height:2.5rem;
@@ -53,8 +69,20 @@ html{
     margin-right:15rem;
     background-color: #ECEEF0;
     padding-left: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    margin-right: 5rem;
+}
+#searchImg img{
+    height: 1.5rem;
+    width: 2rem;
+    position: relative;
+    top: -2.2rem;
+    left: .7rem;
+}
+#searchImg{
+    height: 0rem;
+    width: 0rem;
 }
 .btn{
     background-color: white;
@@ -62,35 +90,55 @@ html{
 }
 #main2{
     display: flex;
-    margin-right: 2%;
-    
+    width: 30rem;
+    justify-content: center;
+    align-items: center; 
 }
-#refresh{
-    margin-right: rem;
+.menutext{
+   margin: 0 1rem;
+   font-size: large;
+   color: #ECEEF0;
 }
-#setting{
-    margin-right: rem;
+.menutext:hover{
+    color: orange;
+    cursor: context-menu;
 }
-#viewGrid{
-    margin-right: rem;
+#viewGrid button{
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    top: .3rem;
+}
+#viewGrid img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #bigDiv{
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+     background-image:url('bgimg.jpg');;
+}
+.text{
+    margin-left: 2rem;
+    color: orange;
+}
+#text{
+    padding-left: 1rem;
 }
 
- #leftDiv{
+ .hider{
     display: flex;
     flex-direction: column;
     width: 16rem;
     height:40em;
-    /* margin-top: 2.5rem; */
+    
 } 
-#leftDiv:hover{
-  background-color: #ECEEF0;
-  display: flex;
-  visibility: visible;
+.hider{
+    visibility: hidden;
+ }
+.Display li{
+    
+    color: blue;
 }
 #search{
     position: relative;
@@ -108,147 +156,150 @@ html{
     border-bottom-right-radius: 10px;
     border-top-right-radius:10px ;
 }
+
 #notes{
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    visibility: hidd;
+
+}
+#png img{
+    width: 2rem;
 }
 #reminders{
     margin-top:1.5rem;
     display: flex;
     align-items: center;
-    visibility: hidd;
+    
 }
 #editLabels{
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    visibility: hidd;
+
 }
 #archive{
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    visibility: hidd;
+    
 }
 #bin{
     margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    visibility: hidd;
-}
-.text{
-    margin: 1rem;
-}
-#text{
-    margin-left: 1rem;
-    color:#8AA2B8;
+
 }
 #bigDiv{
     min-width:95rem;
     width: 50rem;
-}
-#leftDiv:hover{
-    visibility: visible;
-}
-.png:hover{
-    background-color: rgb(242,243,244) ;
+    min-height: 40rem;
+
 }
 #rightDiv{
+    width: 78rem; 
+    height: auto; 
+}
+#rightUp{
     display: flex;
-    flex-direction: column;
-    width: 80rem;  
+    justify-content: flex-end;
+    width:4rem;
+    height:4rem;
+}
+#divInput{
+    height: 0rem;
+    width: 0rem;
 }
 #addDiv{
-    height: 1rem;
-    width: 1rem;
-    margin-left: 1rem;
+    height: 0rem;
+    width: 0rem;
 }
+#rightdown{
+    display: flex;
+    flex-wrap: wrap;
+}
+    
 #rightDiv input{
-    position: relative;
+   
    height: 2.5rem;
    width: 35rem;
    border-radius: 10px;
-   padding-left: 1rem;
-   margin-top: 1.5rem;
-   left: 10rem;
+  
    background-color: #ECEEF0;
    font-size: 1rem;
    font-weight: 500;
 }
-input#text{
-    width: 31.5rem;
-}
 .note{
-    position: relative;
-    height: 10rem;
-    width: 35rem;
+    
+    height: 13rem;
+    width: 21rem;
     border-radius: 10px;
-    padding-left: 2rem;
-    margin-top: 2.5rem;
-    left: 34rem;
-    bottom:35rem;
-    background-color:white;
-    font-size: 2rem;
-    font-weight: 500; 
+   
+    margin: 1rem 2.5rem;
+    
 }
 #addNote{
-    position: relative;
-    left: 6rem;
-    bottom: -2.5rem;
+    position: relative; 
+    left: 62rem;
+   
     height:3rem;
-    width:3rem;
+    width:10rem;
     border-radius: 10px;
-    top: 2rem;
+    margin: 1rem;
+    
+    
+}
+#addNote img{
+    position: relative;
+    left: -3.5rem;
+}
+#Span{
+    position: relative;
+    left: 54rem;
+    top: -.4rem;
+    font-size: large;
+    font-weight: bold;
+    color: orange;
 }
 #textArea{
-    position: relative;
-    height: 3rem;
-    max-width:35rem;
-    min-width: 35rem;
+   
+    height: 10rem;
+    max-width:20rem;
+    min-width: 20rem;
     min-height: 6rem;
     border-radius: 10px;
-    padding-right:1rem; 
-    margin-top: 2.5rem;
-    left: -13rem;
-    background-color: #ECEEF0;
-    font-size: 1rem;
-    font-weight: 500;
-    padding-left: 1rem;
+   
+    background-color:rgb(127,172,157);
+    
     font-size: 1rem;
     font-weight: 500;
     cursor: text;
+    padding: 1rem;
 }
 .edit{
-    position: relative;
-    left: -13rem;
-    top: 2rem;
+    
     border-radius: 10px;
+    background-color: rgb(198, 246, 198);
 }
 .main{
-    position: relative;
-    height: 3rem;
-    max-width: 35rem;
-    min-width: 35rem;
+  
+    height: 10rem;
+    max-width: 20rem;
+    min-width: 20rem;
     min-height: 6rem;
     border-radius: 10px;
-    padding-right:1rem; 
-    margin-top: 2.5rem;
-    left: -13rem;
-    background-color: #ECEEF0;
-    font-size: 1rem;
+   
+    background-color:rgb(236, 187, 96);
+    font-size: 1.2rem;
     font-weight: 500;
-    padding-left: 1rem;
-    font-size: 1rem;
-    font-weight: 500; 
+    
+    padding: 1rem;
 
 }
 .delete{
-    position: relative;
-    left: -13rem;
-    top: 2rem;
+   
     border-radius: 10px;
+    background-color:rgb(232, 145, 145);
 }
 .hidden{
     display: none;
@@ -268,182 +319,328 @@ input#text{
     top:-2.3rem;
     height: 5rem;
     left: -.5rem;
-    /* background-color: black; */
 }
-#refresh1:hover{
-    opacity: 1;
-}
-#viewGrid1:hover{
-    opacity: 1;
-}
-#setting1:hover{
-    opacity: 1;
-}
+
+
 /* ---------------------------------------------------media queries---------------------------------------------------------------- */
-  
-  @media screen and (max-width:768px)
-  {
-    html{
-        font-size: 40%;
-    }
-   
-     .text{
-        display: none;
-    }
-    
-    #text{
-        position: relative;
-        top: 1rem;
-        margin-left: 3rem;
-        height: 4rem;
-        font-size: 5rem;
-        color:#8AA2B8;
-        /* visibility: hidden; */
-    }
+@media screen and (max-width:1024px)
+{
     #textArea{
-        height:100px;
-        max-width:500px;
-        min-width: 500px;
-        min-height:100px;
-        padding-right:2rem; 
-        margin-top: 2rem;
-        margin-top: 3.5rem;
-        font-weight: 500;
-        padding-left: 1rem;
-        font-size: 3rem;
-        font-weight: 500;
-    }
-    .main{
-        height:100px;
-        max-width:500px;
-        min-width: 500px;
-        min-height:100px;
-        padding-right:2rem; 
-        margin-top: 3.5rem;
-        font-weight: 500;
-        padding-left: 1rem;
-        font-size: 3rem;
-        font-weight: 500; 
-    }
-    #main2{
-    
-        margin: 1%;
-    }
-    .navSearchBar{
-        height: 6.5rem;
-        width: 63rem;
-        margin-top: 0.4rem;
-        margin-right: -13rem;
-        padding-left: 5rem;
-        font-size: 5rem;
-    }
-    #search{
-        position: relative;
-        top: -6.3rem;
-        left: -0.2rem;
-    }
-    #keepText{
-        position: relative;
-        top: rem;
-    }
-    #keepText{
-        font-size: 2rem;
-    }
-    #bigDivText input{
-        height:5rem;
-        width: 73rem;
-        position: relative;
-        top: -.1rem;
-        margin-left:4rem; 
-        font-size: 3rem;
-    }
-    #leftDiv
-    {
-        width: 11rem;
-        height: 40rem;
-        margin-top: -0.5rem;
-    }
-     .png img{
-        margin-top: 2rem;
-        padding: 10rem 0rem;
-        height: 7rem;
-        width: 7rem;
-    } 
-    #notes{
-        margin-top: 5rem;
-        
-    }
-    #reminders{
-        margin-top:5rem;
-        
-        
-    }
-    #editLabels{
-        margin-top:5rem;
-        
-        
-    }
-    #archive{
-        margin-top:5rem;
-    
-        
-    }
-    #bin{
-        margin-top:5rem;
-        
-        
-    }
-    #addDiv{
-        position: relative;
-        left: -14rem;
-        height: 9rem;
-        width: 13rem;
-        margin-left: 16rem;
-        margin-top: 3rem;
-    }
-    #rightDiv{
-        width: 99rem;
-        height: 40rem;
-    }
-    #bigDivText{
-        height: 5rem;
-        width: 73rem;
-        position: relative;
-        left: -3rem;
-        top: -10.1rem;
-    }
-    #navbar{
-         height: 8rem;
-         width:109rem;
+   
+        height: 15rem;
+        max-width:30rem;
+        min-width: 30rem;
+        min-height: 10rem;
+        border-radius: 10px;
 
     }
-    #main1{
-        height: 8rem;
-        width: 9rem;
-    }
+    .main{
+  
+        height: 15rem;
+        max-width: 30rem;
+        min-width: 30rem;
+        min-height: 10rem;
+        border-radius: 10px;
+    }  
     .note{
+    
+        height: 20rem;
+        width: 30rem;
+        border-radius: 10px;
+       
+        margin: 1rem 2.5rem;
+        
+    }  
+    .menutext{
+        margin: 1rem;
+        font-size: x-large;
+        color: #ECEEF0;
+     }
+     .navSearchBar{
+        height: 3.5rem;
         position: relative;
-        height: 12rem;
-        width: 61rem;
-        padding-left: 0rem;
-        left: 28rem;
-        margin-top: 15rem;
-        top:-45rem;
-         
-    } 
+        left: 6rem;
+        top: .4rem;
+     }
+     #search{
+        position: relative;
+        left: 6rem;
+     }
+     #navbar{
+        height: 6rem;
+     }
+     #mainMenu button{
+        height: 3rem;
+        width: 3rem;
+     }
+     #mainMenu Button img{
+        height: 3rem;
+        width: 3rem;
+     }
+     #keepImg img{
+        position: relative;
+        top: 1rem;
+        height: 4rem;
+        width: 4rem;
+     }
+     #keepText h2{
+        font-size: 3rem;
+        font-weight: 400;
+        position: relative;
+        top: -1.5rem;
+     }
+     #searchImg img{
+        position: relative;
+        left: 6.5rem;
+        top:-2.5rem;
+        height: 2.2rem;
+        width: 2.2rem;
+     }
+     .png img{
+        height: 3rem;
+        width: 3rem;
+     }
+     .text{
+        font-size: 1.5rem;
+        font-weight: 300;
+
+     }
+}
+  @media screen and (max-width:768px)
+  {
+    #textArea{
+        height: 30rem;
+        max-width:80rem;
+        min-width: 80rem;
+        min-height: 10rem;
+        border-radius: 10px;
+    }
+    .main{
+  
+        height: 30rem;
+        max-width: 80rem;
+        min-width: 80rem;
+        min-height: 10rem;
+        border-radius: 10px;
+       
+    }  
+    .note{
+        height: 40rem;
+        width: 80rem;
+        border-radius: 10px;
+        margin: 1rem 2.5rem;
+        margin: 5rem 0rem;
+    }  
+    .menutext{
+        margin: 0 1rem;
+        font-size: x-large;
+        color: #ECEEF0;
+     } 
+     #main2{
+        display: none;
+     }
+     #navbar{
+        display: relative;
+        height:10rem;
+        width:1800px;
+        
+    }
+    #main1{
+        display: flex;
+        height: 6rem;
+        width: 40rem;
+        flex-direction: row;
+        /* margin: 2rem; */
+        padding: 1rem;
+    }
+    #bigDiv{
+        width: 112.5rem;
+         min-height: 100rem;
+         max-height: auto;
+    }
+    #rightdown{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .leftMain{
+        margin: 1rem 8rem;
+    }
+    .leftMain img{
+        height: 30rem;
+    }
+     .navSearchBar{
+       position: relative;
+       left:-8rem;
+        height: 6rem;
+        padding-left:3rem;
+        font-size: 3rem;
+    }
     #addNote{
+        height:7rem;
+        width:25rem;
+        position: relative;
+        left: 55rem;
+    }
+    #mainMenu button{
+        height: 6rem;
+        width: 6rem;
+        /* position: relative;
+        top: -.5rem; */
+    }
+    
+    #mainMenu button img{
         height: 6rem;
         width: 6rem;
         position: relative;
-        left: 1rem;
-        top: -.25rem;
+        top: -.5rem;
+        /* left: 1rem; */
     }
-    #mainMenu img{
+    #keepImg img{
+        height: 7rem;
+        width: 7rem;
+        position: relative;
+        left: 10rem;
+        top: -1rem;
+    }
+    #keepText h2{
+       font-size:5rem;
+       font-weight:1000;
+       color: orange;
+       position: relative;
+       top: -3rem;
+    }
+    #searchImg img{
+        display: none;
+    }
+    #addNote img{
+        height: 4rem;
+        width: 4rem;
+        position: relative;
+         left: -8rem;
+    }
+    .text{
+        display: none;
+    }
+    #Span{
+       font-size: 3rem;
+        position: relative;
+        left:38rem;
+    }
+    .edit{
+        height: 8rem;
+        width: 8rem;  
+    }
+    .edit img{
         height: 6rem;
         width: 6rem;
-        margin-left: 2rem;
-        padding-right: 1rem;
     }
-    
-    
+    .delete{
+        height: 8rem;
+        width: 8rem;
+    }
+    .delete img{
+        height: 6rem;
+        width: 6rem;
+    }
+    #menu{
+        /* width:auto; */
+        width: 15rem;
+    }
+    .png img{
+        height: 8rem;
+        width: 8rem;
+    }
+    #notes{
+         margin: 12rem 0;
+    }
+    #remainders{
+        margin: 12rem 0;
+    }
+    #editLabels{
+        margin: 12rem 0;
+    }
+    #archive{
+        margin: 12rem 0;
+    }
+    #bin{
+        margin: 12rem 0;
+    }
+
   } 
+  @media screen and (max-width:400px)
+  {
+      .navSearchBar{
+        display: none;
+      }
+      #Span{
+        font-size: 3rem;
+         position: relative;
+         left:-18rem;
+     }
+     #addNote{
+        height:7rem;
+        width:25rem;
+        position: relative;
+        left:0rem;
+    }
+    #keepImg img{
+        height: 5rem;
+        width: 5rem;
+        position: relative;
+        /* top: 1rem; */
+        left: 18rem;
+        height: 8rem;
+        width: 8rem;
+    }
+    #keepText h2{
+        font-size:5rem;
+        font-weight:900;
+        /* color: orange; */
+        position: relative;
+        top: -3rem;
+        left: 10rem;
+        
+     }
+     #mainMenu button{
+        height: 7rem;
+        width: 7rem;
+        
+    }
+    #mainMenu button img{
+        height: 7rem;
+        width: 7rem;
+        position: relative;
+        top: -.5rem;
+        /* left: 1rem; */
+    }
+    #menu{
+        height: 13rem;
+        width: 13rem; 
+    }
+    .png img{
+     height: 8rem;
+     width: 8rem;
+    }
+    #notes{
+        margin: 12rem 0;
+   }
+   #remainders{
+       margin: 12rem 0;
+   }
+   #editLabels{
+       margin: 12rem 0;
+   }
+   #archive{
+       margin: 12rem 0;
+   }
+   #bin{
+       margin: 12rem 0;
+   }
+    
+    
+  }
+
+ .hider{
+    visibility: hidden;
+ }
