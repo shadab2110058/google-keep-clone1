@@ -517,7 +517,7 @@ html{
         height: 4rem;
         width: 4rem;
         position: relative;
-         left: -8rem;
+         left: -108rem;
     }
     .text{
         display: none;
@@ -582,14 +582,22 @@ html{
         height:7rem;
         width:25rem;
         position: relative;
-        left:0rem;
+        left: -3rem;
     }
-    #keepImg img{
-        height: 5rem;
-        width: 5rem;
+    #rightDiv{
+        width: 99rem;
+        height: 40rem;
+    }
+    #bigDivText{
         position: relative;
-        /* top: 1rem; */
-        left: 18rem;
+        left: -3rem;
+    }
+    #navbar{
+         height: 8rem;
+         width:109rem;
+
+    }
+    #main1{
         height: 8rem;
         width: 8rem;
     }
