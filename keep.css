@@ -1,21 +1,23 @@
-body{
-    height: 0%;
-    width: 0% ;
+body
+{
     margin: 0px;
     padding: 0px;
     background-image:url('bgimg.jpg');
+    overflow-x: hidden;
+
 }
-html{
+html
+{
     font-size: 100%;
     margin: 0px;
     padding: 0px;
 }
-#navbar{
+#navbar
+{
     display: relative;
     height:4rem;
     width:96rem;
     border: 1px solid transparent;
-    border-image: linear-gradient(45deg,blue,black,brown,yellow,orange,green,red);
     border-image-slice:1;
     display: flex;
     justify-content: space-between;
@@ -24,18 +26,18 @@ html{
     z-index:0;
 }
 
-#main1{
+#main1
+{
     display: flex;
     height: 4rem;
     width: 12rem;
     flex-direction: row;
 }
-
-
 #mainMenu{
     margin: 1.2rem 2rem;
 }
-#mainMenu button {
+#mainMenu button 
+{
    height: 2rem;
    width: 2rem;
    background-color:antiquewhite;
@@ -53,7 +55,6 @@ html{
     border-radius: 200%;
 }
 #keepImg{
-   /* margin-left: -22%;   */
    position: relative;
    top: .5rem;
 }
@@ -220,7 +221,6 @@ html{
 }
     
 #rightDiv input{
-   
    height: 2.5rem;
    width: 35rem;
    border-radius: 10px;
@@ -230,13 +230,10 @@ html{
    font-weight: 500;
 }
 .note{
-    
     height: 13rem;
     width: 21rem;
     border-radius: 10px;
-   
     margin: 1rem 2.5rem;
-    
 }
 #addNote{
     position: relative; 
@@ -271,7 +268,7 @@ html{
    
     background-color:rgb(127,172,157);
     
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     cursor: text;
     padding: 1rem;
@@ -290,11 +287,12 @@ html{
     border-radius: 10px;
    
     background-color:rgb(236, 187, 96);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     
     padding: 1rem;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 .delete{
    
@@ -332,6 +330,8 @@ html{
         min-width: 30rem;
         min-height: 10rem;
         border-radius: 10px;
+        font-size: 2rem;
+        font-weight: 500;
 
     }
     .main{
@@ -340,7 +340,9 @@ html{
         max-width: 30rem;
         min-width: 30rem;
         min-height: 10rem;
-        border-radius: 10px;
+        border-radius: 10px; 
+        font-size: 2rem;
+        font-weight: 500;
     }  
     .note{
     
@@ -410,23 +412,29 @@ html{
   {
     #textArea{
         height: 30rem;
-        max-width:80rem;
-        min-width: 80rem;
+        max-width:60rem;
+        min-width: 60rem;
         min-height: 10rem;
         border-radius: 10px;
+        font-size: 3rem;
+        font-weight: 500;
+      
     }
+    
     .main{
   
         height: 30rem;
-        max-width: 80rem;
-        min-width: 80rem;
+        max-width: 60rem;
+        min-width: 60rem;
         min-height: 10rem;
         border-radius: 10px;
+        font-size: 3rem;
+        font-weight: 500;
        
     }  
     .note{
         height: 40rem;
-        width: 80rem;
+        width: 60rem;
         border-radius: 10px;
         margin: 1rem 2.5rem;
         margin: 5rem 0rem;
@@ -440,23 +448,21 @@ html{
         display: none;
      }
      #navbar{
-        display: relative;
         height:10rem;
-        width:1800px;
+        width:96rem;
+        /* border: 20px solid red; */
         
     }
     #main1{
-        display: flex;
-        height: 6rem;
-        width: 40rem;
-        flex-direction: row;
-        /* margin: 2rem; */
-        padding: 1rem;
+        display:flex;
+        height:6rem;
+        width:40rem;
+        flex-direction:row;
+        padding:1rem;
     }
     #bigDiv{
-        width: 112.5rem;
-         min-height: 100rem;
-         max-height: auto;
+        width:auto;
+
     }
     #rightdown{
         display: flex;
@@ -471,10 +477,12 @@ html{
     }
      .navSearchBar{
        position: relative;
-       left:-8rem;
+       left:4rem;
         height: 6rem;
+        /* width: auto; */
         padding-left:3rem;
         font-size: 3rem;
+        top: 1rem;
     }
     #addNote{
         height:7rem;
@@ -485,8 +493,6 @@ html{
     #mainMenu button{
         height: 6rem;
         width: 6rem;
-        /* position: relative;
-        top: -.5rem; */
     }
     
     #mainMenu button img{
@@ -501,7 +507,7 @@ html{
         width: 7rem;
         position: relative;
         left: 10rem;
-        top: -1rem;
+        top: -2rem;
     }
     #keepText h2{
        font-size:5rem;
@@ -517,7 +523,7 @@ html{
         height: 4rem;
         width: 4rem;
         position: relative;
-         left: -108rem;
+         left:-8rem;
     }
     .text{
         display: none;
@@ -570,7 +576,26 @@ html{
   } 
   @media screen and (max-width:400px)
   {
-      .navSearchBar{
+    #textArea{
+        font-size: 5rem;
+        font-weight: 500;
+        position: relative;
+        right: 5rem;
+
+        
+    }
+    .main{
+        font-size: 5rem;
+        font-weight: 500;
+       
+        position: relative;
+        right: 5rem;
+    }
+    /* .note{
+        width:rem;
+    } */
+      .navSearchBar
+      {
         display: none;
       }
       #Span{
@@ -584,9 +609,35 @@ html{
         position: relative;
         left: -3rem;
     }
+    .edit{
+        height: 8rem;
+        width: 8rem; 
+        position: relative;
+        left: -5rem; 
+    }
+    .edit img{
+        height: 6rem;
+        width: 6rem;
+      
+    }
+    .delete{
+        height: 8rem;
+        width: 8rem;
+        position: relative;
+        left: -5rem; 
+    }
+    .delete img{
+        height: 6rem;
+        width: 6rem;
+       
+    }
+    #bigDiv{
+        width:80rem;
+        height: 80rem;
+    }
     #rightDiv{
-        width: 99rem;
-        height: 40rem;
+        width: 80rem;
+        height: 80rem;
     }
     #bigDivText{
         position: relative;
@@ -594,7 +645,7 @@ html{
     }
     #navbar{
          height: 8rem;
-         width:109rem;
+         width:100rem;
 
     }
     #main1{
@@ -604,15 +655,22 @@ html{
     #keepText h2{
         font-size:5rem;
         font-weight:900;
-        /* color: orange; */
         position: relative;
-        top: -3rem;
+        top: -4.5rem;
         left: 10rem;
         
      }
+     #keepImg img{
+        
+        position: relative;
+        left: 20rem;
+        top: -2rem;
+    }
      #mainMenu button{
         height: 7rem;
         width: 7rem;
+        position: relative;
+        top: -1.5rem;
         
     }
     #mainMenu button img{
@@ -620,7 +678,6 @@ html{
         width: 7rem;
         position: relative;
         top: -.5rem;
-        /* left: 1rem; */
     }
     #menu{
         height: 13rem;
@@ -648,6 +705,7 @@ html{
     
     
   }
+  
 
  .hider{
     visibility: hidden;
